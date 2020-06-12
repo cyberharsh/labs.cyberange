@@ -1,0 +1,282 @@
+[
+  {
+  "docker_url": "vaday/wpa2",
+  "docker_port": "",
+  "title": "WPA2 PSK Cracking",
+  "content": "WPA2-PSK is more robust from a security standpoint than WPA-PSK. However, it is also susceptible to dictionary/bruteforce attacks just like WPA-PSK. Unfortunately, the standard did not address the problem if users choosing weak passphrases.",
+  "flag": {
+      "1": "India@555888"
+    },
+  "flag_question": {
+   "1": "The challenge CAP can be found in the home folder of the user. The objective is simple - launch a cracking attack and recover the pre-shared passphrase used."
+    },
+  "image_tag_id": "latest",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "m5",
+  "difficulty": "Medium"
+},
+{
+    "docker_url": "vaday/wep",
+    "docker_port": "",
+    "title": "WEP Cracking",
+    "content": "Wired Equivalent Privacy (WEP) standard was the first attempt of WiFi Alliance to secure the WiFi traffic. The scheme was found to be vulnerable to attack and it was succeeded by WPA standards. But, believe it or not, WEP is still encountered in wild for different reasons which vary from supporting legacy devices to selecting WEP by mistake while configuring WiFi AP.",
+    "flag": {
+      "1": "12:34:56:78:90"
+    },
+    "flag_question": {
+      "1":"The challenge CAP can be found in the home folder of the user. It contain traffic from a WEP secured SSID 'crack_me'. The objective is clear. Launch cracking attack and recover the secret shared key used."
+          },
+    "image_tag_id": "latest",
+    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+    "category": "m5",
+    "difficulty": "easy"
+  },
+
+{
+    "docker_url": "vaday/vapt_hydra_dirb ",
+    "docker_port": "80",
+    "title": "Directory Listing and MD5 Decryption",
+    "content": " This repository contains a docker image with a cyberange login page. In this lab you have to use dirbuster to extract a file containing admin user and password . The password is md5 hashed, use an online MD5 decryptor to decrypt the password",
+ "image_tag_id": "latest",
+  "flag": {
+      "1": "Password@123"
+    },
+    "flag_question":{
+     "1": "What is the MD5 decrypted password"},
+    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+    "category": "m6",
+    "difficulty": "easy"
+  },
+  {
+      "docker_url": "vaday/vapt_hydra_dirb ",
+      "docker_port": "80",
+      "title": "Hydra bruteforce",
+      "content": " This repository contains a docker image in which using hydra you are required to launch a  dictionary attack on a login page for user cyberange.",
+   "image_tag_id": "latest",
+   "flag": {
+      "1": "password"
+    },
+      "flag_question":{
+        "1":"Find the password for user cyberange"
+        },
+      "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+      "category": "m6",
+      "difficulty": "easy"
+    },
+    {
+    "docker_url": "arafatansari/ulicms2019.1",
+    "docker_port": "80",
+    "title": "XSS in UliCMS",
+    "content": " Multiple cross site scripting (XSS) vulnerabilities in UliCMS 2019.2 and 2019.1 allow remote attackers to inject arbitrary web script or HTML via the go parameter to admin/index.php, the go parameter to /admin/index.php?register=register, or the error parameter to admin/index.php?action=favicon. ",
+"image_tag_id": "1139819",
+"flag": {
+      "1": ""
+    },
+    "flag_question":{
+      "1":"The objective is to find and exploit the vulnerability."},
+    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+    "category": "m8",
+     "difficulty": "medium"
+  },
+  {
+    "docker_url": "cybershelby/sudoo",
+    "docker_port": "80",
+    "title": "Security Bypass",
+    "content": "This security flaw could enable a malicious user to execute arbitrary commands as root user even in cases where the root access is disallowed.",
+ "image_tag_id": "latest",
+ "flag": {
+      "1": ""
+    },
+    "flag_question":{
+      "1":"The objective is to find and exploit the vulnerability."},
+        "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+    "category": "m5",
+    "difficulty": "Medium"
+  },
+  {
+    "docker_url": "cybershelby/socialg",
+    "docker_port": "80",
+    "title": "PHISHING",
+    "content": "Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individuals into providing sensitive data such as personally identifiable information, banking and credit card details, and passwords.Usage of Shellphish for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program",
+ "image_tag_id": "latest",
+ "flag": {
+      "1": ""
+    },
+    "flag_question":{
+      "1":"The objective is to find and exploit the vulnerability."},
+        "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+    "category": "m4",
+    "difficulty": "Hard"
+  },
+  {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "80",
+   "title": "Metasploit Practice - D-Link DIR-300A DIR-320 DIR-615D HTTP Login Utility",
+   "content": "This module attempts to authenticate to different D-Link HTTP management services. It has been tested on D-Link DIR-300 Hardware revision A, D-Link DIR-615 Hardware revision D and D-Link DIR-320 devices. It is possible that this module also works with other models.",
+   "flag": {
+     "1": "adminadmin"
+   },
+   "flag_question": {
+     "1": "Find the username and password. Submit by concatenating them."
+   },
+   "image_tag_id": "2.0",
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/dlink_dir_300_615_http_login; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "80",
+   "title": "Metasploit Practice - D Link User Agent Backdoor Scanner",
+   "content": "This module attempts to find D-Link devices running Alphanetworks web interfaces affected by the backdoor found on the User-Agent header. This module has been tested successfully on a DIR-100 device with firmware version v1.13.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "xmlset_roodkcableoj28840ybtide"
+   },
+   "flag_question": {
+     "1": "Vulnerable for authentication bypass via which User-Agent Header?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/dlink_user_agent_backdoor; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "80",
+   "title": "Metasploit Practice - HTTP Git Scanner",
+   "content": "This module can detect situations where there may be information disclosure vulnerabilities that occur when a Git repository is made available over HTTP.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "DIRC[remote]"
+   },
+   "flag_question": {
+     "1": "What is secret text found in git config file?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/git_scanner; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "80",
+   "title": "Metasploit Practice - HTTP Writable Path PUT-DELETE File Access",
+   "content": "This module can abuse misconfigured web servers to upload and delete web content via PUT and DELETE HTTP requests. Set ACTION to either PUT or DELETE. PUT is the default. If filename isn't specified, the module will generate a random string for you as a .txt file. If DELETE is used, a filename is required.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "msf_http_put_test.txt"
+   },
+   "flag_question": {
+     "1": "What is the name of the uploaded file?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/http_put; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "80",
+   "title": "Metasploit Practice - JBoss Vulnerability Scanner",
+   "content": "This module scans a JBoss instance for a few vulnerabilities.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "7"
+   },
+   "flag_question": {
+     "1": "How many authentication bypass vulnerabilities are found?(numeric)"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/jboss_vulnscan; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "443",
+   "title": "Metasploit Practice - Dell iDRAC Default Login",
+   "content": "This module attempts to login to a iDRAC webserver instance using default username and password. Tested against Dell Remote Access Controller 6 - Express version 1.50 and 1.85",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "calvin"
+   },
+   "flag_question": {
+     "1": "What is the successful login password found?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/dell_idrac; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "4848",
+   "title": "Metasploit Practice - GlassFish Brute Force Utility",
+   "content": "This module attempts to login to GlassFish instance using username and password combinations indicated by the USER_FILE, PASS_FILE, and USERPASS_FILE options. It will also try to do an authentication bypass against older versions of GlassFish. Note: by default, GlassFish 4.0 requires HTTPS, which means you must set the SSL option to true, and SSLVersion to TLS1. It also needs Secure Admin to access the DAS remotely.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "rootpassword"
+   },
+   "flag_question": {
+     "1": "What is the username and password? Submit by concatenating the user and password."
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/glassfish_login; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "7547",
+   "title": "Metasploit Practice - Zyxel Eir D1000 DSL Modem NewNTPServer Command Injection Over TR-064",
+   "content": "Broadband DSL modems manufactured by Zyxel and distributed by some European ISPs are vulnerable to a command injection vulnerability when setting the NewNTPServer value using the TR-64 SOAP-based configuration protocol. In the tested case, no authentication is required to set this value on affected DSL modems. This exploit was originally tested on firmware versions up to 2.00(AADU.5)_20150909.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "flag"
+   },
+   "flag_question": {
+     "1": "Command injection"
+   },
+   "module": "perl vulEmu.pl set activate:exploit/linux/http/tr064_ntpserver_cmdinject; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "8080",
+   "title": "Metasploit Practice - HP Intelligent Management BIMS DownloadServlet Directory Traversal",
+   "content": "This module exploits a lack of authentication and a directory traversal in HP Intelligent Management, specifically in the DownloadServlet from the BIMS component, in order to retrieve arbitrary files with SYSTEM privileges. This module has been tested successfully on HP Intelligent Management Center 5.1 E0202 with BIMS 5.1 E0201 over Windows 2003 SP2.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "my secreteroot"
+   },
+   "flag_question": {
+     "1": "What is the Flag Value retrieved from the downloaded File?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/hp_imc_bims_downloadservlet_traversal; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ },
+ {
+   "docker_url": "packed4rmadillo/msf-emu",
+   "docker_port": "8080",
+   "title": "Metasploit Practice - HP Intelligent Management SOM FileDownloadServlet Arbitrary Download",
+   "content": "This module exploits a lack of authentication and access control in HP Intelligent Management, specifically in the FileDownloadServlet from the SOM component, in order to retrieve arbitrary files with SYSTEM privileges. This module has been tested successfully on HP Intelligent Management Center 5.2_E0401 with SOM 5.2 E0401 over Windows 2003 SP2.",
+   "image_tag_id": "2.0",
+   "flag": {
+     "1": "My secret, hahaharoot"
+   },
+   "flag_question": {
+     "1": "What is the Flag Value retrieved from the downloaded File?"
+   },
+   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/hp_imc_som_file_download; tail -f /dev/null",
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "vapt",
+   "difficulty": "easy"
+ }
+
+]
