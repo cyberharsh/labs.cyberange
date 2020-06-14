@@ -332,13 +332,35 @@
      ""
    ],
    "title": "Openssh CVE 2018-15473",
-   "content": "In Apache Log4j 2.x before 2.8.2, when using the TCP socket server or UDP socket server to receive serialized log events from another application, a specially crafted binary payload can be sent that, when deserialized, can execute arbitrary code. ",
+   "content": "OpenSSH through 7.7 is prone to a user enumeration vulnerability due to not delaying bailout for an invalid authenticating user until after the packet containing the request has been fully parsed, related to auth2-gss.c, auth2-hostbased.c, and auth2-pubkey.c. ",
    "image_tag_id": "latest",
    "flag": {
      "1": "root"
    },
    "flag_question": {
      "1": "List out the name of a valid user"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m3",
+   "difficulty": "Easy"
+ },
+ {
+   "docker_url": "vaday/solr",
+   "docker_port": "8983",
+   "args": [
+     ""
+   ],
+   "command":[
+     ""
+   ],
+   "title": "Apache solr CVE-2017-12629",
+   "content": "Remote code execution occurs in Apache Solr before 7.1 with Apache Lucene before 7.1 by exploiting XXE in conjunction with use of a Config API add-listener command to reach the RunExecutableListener class. Elasticsearch, although it uses Lucene, is NOT vulnerable to this. Note that the XML external entity expansion vulnerability occurs in the XML Query Parser which is available, by default, for any query request with parameters deftype=xmlparser and can be exploited to upload malicious data to the /upload request handler or as Blind XXE using ftp wrapper in order to read arbitrary local files from the Solr server. Note also that the second vulnerability relates to remote code execution using the RunExecutableListener available on all affected versions of Solr. ",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "secretflag"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
    },
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "m8",
