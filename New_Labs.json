@@ -277,6 +277,72 @@
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "vapt",
    "difficulty": "easy"
+ },
+ {
+   "docker_url": "vaday/elasticsearch",
+   "docker_port": "9200, 9300",
+   "args": [
+     ""
+   ],
+   "command":[
+     ""
+   ],
+   "title": "Elastic search CVE-2015-3337",
+   "content": "There is a Directory traversal vulnerability that exists in Elasticsearch before 1.4.5 and 1.5.x before 1.5.2, when a site plugin is enabled. It allows remote attackers to read arbitrary files via unspecified vectors.",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "leet1337"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m8",
+   "difficulty": "medium"
+ },
+ {
+   "docker_url": "vaday/log4j",
+   "docker_port": "4712",
+   "args": [
+     ""
+   ],
+   "command":[
+     ""
+   ],
+   "title": "Apache log4j CVE-2017-5645",
+   "content": "In Apache Log4j 2.x before 2.8.2, when using the TCP socket server or UDP socket server to receive serialized log events from another application, a specially crafted binary payload can be sent that, when deserialized, can execute arbitrary code. ",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "challengeIQ"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m8",
+   "difficulty": "Hard"
+ },
+ {
+   "docker_url": "vaday/openssh",
+   "docker_port": "22",
+   "args": [
+     ""
+   ],
+   "command":[
+     ""
+   ],
+   "title": "Openssh CVE 2018-15473",
+   "content": "In Apache Log4j 2.x before 2.8.2, when using the TCP socket server or UDP socket server to receive serialized log events from another application, a specially crafted binary payload can be sent that, when deserialized, can execute arbitrary code. ",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "root"
+   },
+   "flag_question": {
+     "1": "List out the name of a valid user"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m8",
+   "difficulty": "Hard"
  }
 
 ]
