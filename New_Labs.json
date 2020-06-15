@@ -67,6 +67,13 @@
     "docker_url": "arafatansari/ulicms2019.1",
     "docker_port": "80",
     "title": "XSS in UliCMS",
+    "args": [
+      "service apache2 start; service mysql start; tail -f /dev/null"
+    ],
+    "command":[
+      "/bin/sh",
+      "-c"
+    ],
     "content": " Multiple cross site scripting (XSS) vulnerabilities in UliCMS 2019.2 and 2019.1 allow remote attackers to inject arbitrary web script or HTML via the go parameter to admin/index.php, the go parameter to /admin/index.php?register=register, or the error parameter to admin/index.php?action=favicon. ",
 "image_tag_id": "1139819",
 "flag": {
