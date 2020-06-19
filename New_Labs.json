@@ -373,6 +373,22 @@
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "m8",
    "difficulty": "Hard"
+ },
+ {
+   "docker_url": "vaday/libssh",
+   "docker_port": "22",
+   "title": "Libssh server CVE-2018-10933",
+   "content": "libssh is a multiplatform C library implementing the SSHv2 protocol on client and server side. A logic vulnerability was found in libssh's server-side state machine. The attacker can send the `MSG_USERAUTH_SUCCESS` message before the authentication succeed. That can bypass the authentication and access the target SSH server. ",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "logicalvulnerability"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m8",
+   "difficulty": "Medium"
  }
 
 ]
