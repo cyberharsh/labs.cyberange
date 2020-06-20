@@ -387,8 +387,47 @@
      "1": "Retrieve the flag value stored in /etc/flagA"
    },
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
-   "category": "m8",
+   "category": "m5",
    "difficulty": "Medium"
+ },
+ {
+   "docker_url": "vaday/git8386",
+   "docker_port": "22",
+   "title": "Gitcve-2017-8386",
+   "content": "git-shell in git before 2.4.12, 2.5.x before 2.5.6, 2.6.x before 2.6.7, 2.7.x before 2.7.5, 2.8.x before 2.8.5, 2.9.x before 2.9.4, 2.10.x before 2.10.3, 2.11.x before 2.11.2, and 2.12.x before 2.12.3 might allow remote authenticated users to gain privileges via a repository name that starts with a - (dash) character.",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "flag9"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m5",
+   "difficulty": "Medium"
+ },
+ {
+   "docker_url": "vaday/minihttpd",
+   "docker_port": "8080",
+   "args": [
+     "mini_httpd -p 8080 -u www-data -h 0.0.0.0 -D -l /dev/stdout -v -T utf-8"
+   ],
+   "command":[
+     "/bin/sh",
+     "-c"
+   ],
+   "title": "Mini_httpd CVE-2018-18778",
+   "content": "Mini_httpd is a micro Http server that can maintain a certain level of performance (about 90% of Apache) when it takes up less system resources, so it is widely used as embedded by various IOTs (routers, switches, cameras, etc.) server. The devices of manufacturers including Huawei, zyxel, Hikvision, and Raspberry Pi have all used Mini_httpd components. When mini_httpd turns on the virtual host mode, the user request http://HOST/FILEwill access the HOST/FILEfiles in the current directory.",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "flagAcquired"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m8",
+   "difficulty": "Easy"
  }
 
 ]
