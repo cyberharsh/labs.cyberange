@@ -298,7 +298,7 @@
    "content": "There is a Directory traversal vulnerability that exists in Elasticsearch before 1.4.5 and 1.5.x before 1.5.2, when a site plugin is enabled. It allows remote attackers to read arbitrary files via unspecified vectors.",
    "image_tag_id": "latest",
    "flag": {
-     "1": "fleet1337"
+     "1": "leet1337"
    },
    "flag_question": {
      "1": "Retrieve the flag value stored in /etc/flagA"
