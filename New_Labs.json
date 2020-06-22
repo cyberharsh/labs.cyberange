@@ -331,13 +331,8 @@
  },
  {
    "docker_url": "vaday/openssh",
-   "docker_port": "22",
-   "args": [
-     ""
-   ],
-   "command":[
-     ""
-   ],
+   "docker_port": "20022",
+   "docker_target_port": "22",
    "title": "Openssh CVE 2018-15473",
    "content": "OpenSSH through 7.7 is prone to a user enumeration vulnerability due to not delaying bailout for an invalid authenticating user until after the packet containing the request has been fully parsed, related to auth2-gss.c, auth2-hostbased.c, and auth2-pubkey.c. ",
    "image_tag_id": "latest",
@@ -349,7 +344,7 @@
    },
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "m3",
-   "difficulty": "Easy"
+   "difficulty": "Hard"
  },
  {
    "docker_url": "vaday/solr",
