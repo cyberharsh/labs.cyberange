@@ -241,15 +241,15 @@
    "content": "Broadband DSL modems manufactured by Zyxel and distributed by some European ISPs are vulnerable to a command injection vulnerability when setting the NewNTPServer value using the TR-64 SOAP-based configuration protocol. In the tested case, no authentication is required to set this value on affected DSL modems. This exploit was originally tested on firmware versions up to 2.00(AADU.5)_20150909.",
    "image_tag_id": "2.0",
    "flag": {
-     "1": "flag"
+     "1": "hello yall!"
    },
    "flag_question": {
-     "1": "Command injection"
+     "1": "What is the message present in the secret.txt file"
    },
    "module": "perl vulEmu.pl set activate:exploit/linux/http/tr064_ntpserver_cmdinject; tail -f /dev/null",
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "vapt",
-   "difficulty": "easy"
+   "difficulty": "Medium"
  },
  {
    "docker_url": "packed4rmadillo/msf-emu",
