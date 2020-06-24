@@ -74,7 +74,7 @@
       "/bin/sh",
       "-c"
     ],
-    "content": " Multiple cross site scripting (XSS) vulnerabilities in UliCMS 2019.2 and 2019.1 allow remote attackers to inject arbitrary web script or HTML via the go parameter to admin/index.php, the go parameter to /admin/index.php?register=register, or the error parameter to admin/index.php?action=favicon. ",
+    "content": " Multiple cross site scripting (XSS) vulnerabilities in UliCMS 2019.2 and 2019.1 allow remote attackers to inject arbitrary web script or HTML via the go parameter to admin/index.php, the go parameter to /admin/index.php?register=register, or the error parameter to admin/index.php?action=favicon. Login with the following credentials id- cyberange password- admin123 ",
 "image_tag_id": "1139819",
 "flag": {
       "1": ""
@@ -474,6 +474,39 @@
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "m5",
    "difficulty": "Medium"
+ },
+ {
+   "docker_url": "vaday/phpunit",
+   "docker_port": "8080",
+   "docker_target_port": "80",
+   "title": "Php unit CVE-2017-9841",
+   "content": "Util/PHP/eval-stdin.php in PHPUnit before 4.8.28 and 5.x before 5.6.3 allows remote attackers to execute arbitrary PHP code via HTTP POST data beginning with a <?php  substring, as demonstrated by an attack on a site with an exposed /vendor folder, i.e., external access to the /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php URI.",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "iamflag"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m9",
+   "difficulty": "Medium"
+ },
+ {
+   "docker_url": "vaday/rubyrails",
+   "docker_port": "3000",
+   "title": "Ruby On Rails Path Traversal Vulnerability (CVE-2018-3760)",
+   "content": "There is a path traversal vulnerability caused by secondary decoding in Sprockets 3.7.1 and lower versions. An attacker can use %252e%252e/ to access the root directory and read or execute any file on the target server.",
+   "image_tag_id": "latest",
+   "flag": {
+     "1": "flagachieved"
+   },
+   "flag_question": {
+     "1": "Retrieve the flag value stored in /etc/flagA"
+   },
+   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+   "category": "m9",
+   "difficulty": "Easy"
  }
 
 ]
