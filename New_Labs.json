@@ -507,6 +507,94 @@
    "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
    "category": "m9",
    "difficulty": "Easy"
- }
-
+ },
+ {
+ "docker_url": "vaday/joomlasql",
+ "docker_port": "80",
+ "title": "SQL injection Joomla",
+ "args": [
+   "service apache2 start; service mysql start; tail -f /dev/null"
+ ],
+ "command":[
+   "/bin/sh",
+   "-c"
+ ],
+ "content": "The following URI is vulnerable to sql injection. index.php?option=com_jsjobs&task=cities.savecity&citydata= . Login to the web app using the following credentials id = username password= password ",
+"image_tag_id": "47232",
+"flag": {
+   "1": ""
+ },
+ "flag_question":{
+   "1":"The objective is to find and exploit the vulnerability."},
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+ "category": "m8",
+  "difficulty": "medium"
+},
+{
+  "docker_url": "vaday/tomcat",
+  "docker_port": "8080",
+  "title": " Arbitrary Write-file Vulnerability (CVE-2017-12615)",
+  "content": "When running Apache Tomcat 7.0.0 to 7.0.79 on Windows with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
+  "image_tag_id": "latest",
+  "flag": {
+    "1": "iamtheflag"
+  },
+  "flag_question": {
+    "1": "Retrieve the flag value stored in /etc/flagA"
+  },
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "m8",
+  "difficulty": "Hard"
+},
+{
+  "docker_url": "vaday/goahead",
+  "docker_port": "8080",
+  "docker_target_port": "80",
+  "title": "GoAhead cve - 2017 -17562",
+  "content": "After GoAhead receives the request, it will take the key and value from the URL parameter and register it into the environment variable of the CGI program, and only filter the REMOTE_HOSTsum HTTP_AUTHORIZATION. We can control environment variables and there are many ways to attack. We can specify LD_PRELOAD=/proc/self/fd/0that because it /proc/self/fd/0is standard input, in CGI programs, the POST data stream is the standard input stream. We compile a dynamic link library, put it in the POST Body, and send it to http://target/cgi-bin/index?LD_PRELOAD=/proc/self/fd/0, CGI will load the dynamic link library we sent, causing a remote command execution vulnerability.",
+  "image_tag_id": "latest",
+  "flag": {
+    "1": "helloflag"
+  },
+  "flag_question": {
+    "1": "Retrieve the flag value stored in /etc/flagA"
+  },
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "m8",
+  "difficulty": "Medium"
+},
+{
+ "docker_url": "vaday/thinkphp",
+ "docker_port": "8080",
+ "docker_target_port": "80",
+ "title": "Remote Code Execution Vulnerability-ThinkPHP",
+ "content": "ThinkPHP is an extremely widely used PHP development framework in China. In its version 5, as the framework processes controller name incorrectly, it can execute any method if the website doesn't have mandatory routing enabled (which is default), resulting in a RCE vulnerability.",
+ "image_tag_id": "latest",
+ "flag": {
+   "1": "phpflag"
+ },
+ "flag_question": {
+   "1": "Retrieve the flag value stored in /etc/flagA"
+ },
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+ "category": "m8",
+ "difficulty": "Medium"
+},
+{
+ "docker_url": "vaday/drupal",
+ "docker_port": "8081",
+ "docker_target_port": "80",
+ "title": "Drupal core CVE-2018-7602",
+ "content": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result in the site being compromised. This vulnerability is related to Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002. Both SA-CORE-2018-002 and this vulnerability are being exploited in the wild.",
+ "image_tag_id": "latest",
+ "flag": {
+   "1": "drupalflag"
+ },
+ "flag_question": {
+   "1": "Retrieve the flag value stored in /etc/flagA"
+ },
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+ "category": "m8",
+ "difficulty": "Hard"
+}
 ]
