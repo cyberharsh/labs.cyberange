@@ -596,5 +596,98 @@
  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
  "category": "m8",
  "difficulty": "Hard"
+},
+{
+ "docker_url": "vaday/nginx7529",
+ "docker_port": "8080",
+ "title": "Nginx CVE-2017-7529",
+ "content": "Nginx versions since 0.5.6 up to and including 1.13.2 are vulnerable to integer overflow vulnerability in nginx range filter module resulting into leak of potentially sensitive information triggered by specially crafted request.",
+ "image_tag_id": "latest",
+ "flag": {
+   "1": ""
+ },
+ "flag_question": {
+   "1": "The objective is to find and exploit the vulnerability."
+ },
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+ "category": "m9",
+ "difficulty": "Medium"
+},
+{
+ "docker_url": "vaday/redis",
+ "docker_port": "6379",
+ "title": "Redis 4.x / 5.x unauthorized access vulnerability",
+ "content": "Unauthorized access to Redis In versions prior to 4.x/5.0.5, we can use the master/slave mode to load remote modules and execute arbitrary commands through dynamic link libraries.",
+ "image_tag_id": "latest",
+ "flag": {
+   "1": "redisflag"
+ },
+ "flag_question": {
+   "1": "Retrieve the flag value stored in /etc/flagA"
+ },
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+ "category": "m8",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/jupyter",
+"docker_port": "8888",
+"title": "SQL injection Joomla",
+"args": [
+  "start-notebook.sh --NotebookApp.token=''"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "If the administrator does not configure a password for Jupyter Notebook, it will lead to an unauthorized access vulnerability, where visitors can create a console and execute arbitrary Python code and commands.",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":"The objective is to find and exploit the vulnerability."},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "m8",
+ "difficulty": "medium"
+},
+{
+"docker_url": "vaday/xss14",
+"docker_port": "80",
+"title": "XSS DomainMod",
+"args": [
+  "service apache2 start; service mysql start; tail -f /dev/null"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "The following URI is vulnerable to sql injection. index.php?option=com_jsjobs&task=cities.savecity&citydata= . Login to the web app using the following credentials id = username password= password ",
+"image_tag_id": "1913618",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":"The objective is to find and exploit the vulnerability."},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "m8",
+ "difficulty": "Easy"
+},
+{
+ "docker_url": "vaday/shellbah",
+ "docker_port": "8080",
+ "docker_target_port": "80",
+ "title": "Shellbash CVE-2014-6271",
+ "content": "GNU Bash through 4.3 processes trailing strings after function definitions in the values of environment variables, which allows remote attackers to execute arbitrary code via a crafted environment, as demonstrated by vectors involving the ForceCommand feature in OpenSSH sshd, the mod_cgi and mod_cgid modules in the Apache HTTP Server, scripts executed by unspecified DHCP clients, and other situations in which setting the environment occurs across a privilege boundary from Bash execution, aka ShellShock. NOTE: the original fix for this issue was incorrect; CVE-2014-7169 has been assigned to cover the vulnerability that is still present after the incorrect fix.",
+ "image_tag_id": "latest",
+ "flag": {
+   "1": "shellshocked"
+ },
+ "flag_question": {
+   "1": "Retrieve the flag value stored in /etc/flagA"
+ },
+ "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+ "category": "m5",
+ "difficulty": "Medium"
 }
 ]
