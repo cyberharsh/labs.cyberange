@@ -632,7 +632,7 @@
 {
 "docker_url": "vaday/jupyter",
 "docker_port": "8888",
-"title": "SQL injection Joomla",
+"title": "Jupyter Notebook Unauthorized Access Vulnerability",
 "args": [
   "start-notebook.sh --NotebookApp.token=''"
 ],
@@ -689,5 +689,54 @@
  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
  "category": "m5",
  "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/joomla",
+"docker_port": "80",
+"title": "Arbitrary File Download Joomla",
+"args": [
+  "service apache2 start; service mysql start; tail -f /dev/null"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "The following URI is vulnerable http://<ip>/index.php?option=com_jssupportticket&c=ticket&task=downloadbyname&id=0&name=. Login to the web app using the following credentials id = username password= password. The objective is to find and exploit the vulnerability. ",
+"image_tag_id": "47216",
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "m8",
+ "difficulty": "medium"
+},
+{
+"docker_url": "packed4rmadillo/proftpd",
+"docker_port": "21",
+"title": "NMAP container",
+"content": "This is an NMAP container. Explore it and try to play around with several options. The hosts to scan will be provided when you start the challenge. Do not scan random hosts on the internet! All the best with your training and enjoy!",
+"image_tag_id": "1.3.5",
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "m3",
+ "difficulty": "Easy"
+},
+{
+"docker_url": "packed4rmadillo/proftpd",
+"docker_port": "21",
+"title": "ProFTPd 1.3.5 - (mod_copy) Remote Command Execution",
+"args": [
+  "echo flag{l33t} > /etc/flagA"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands. Any unauthenticated client can leverage these commands to copy files from any part of the filesystem to a chosen destination. The copy commands are executed with the rights of the ProFTPD service, which by default runs under the privileges of the nobody user. By using /proc/self/cmdline to copy a PHP payload to the website directory, PHP remote code execution is made possible. ",
+"image_tag_id": "1.3.5",
+"flag": {
+  "1": "flag{l33t}"
+},
+"flag_question":{
+  "1":"Retrieve the flag value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "m8",
+ "difficulty": "Easy"
 }
 ]
