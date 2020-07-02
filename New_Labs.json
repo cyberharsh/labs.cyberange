@@ -412,7 +412,7 @@
      "-c"
    ],
    "title": "Mini_httpd CVE-2018-18778",
-   "content": "Mini_httpd is a micro Http server that can maintain a certain level of performance (about 90% of Apache) when it takes up less system resources, so it is widely used as embedded by various IOTs (routers, switches, cameras, etc.) server. The devices of manufacturers including Huawei, zyxel, Hikvision, and Raspberry Pi have all used Mini_httpd components. When mini_httpd turns on the virtual host mode, the user request http://HOST/FILEwill access the HOST/FILEfiles in the current directory.",
+   "content": "Mini_httpd is a micro Http server that can maintain a certain level of performance (about 90% of Apache) when it takes up less system resources, so it is widely used as embedded by various IOTs (routers, switches, cameras, etc.) server. The devices of manufacturers including Huawei, zyxel, Hikvision, and Raspberry Pi have all used Mini_httpd components. When mini_httpd turns on the virtual host mode, the user request http://HOST/FILEwill access the HOST/FILEfiles in the current directory. The target port on which the target host machine is running is 8080",
    "image_tag_id": "latest",
    "flag": {
      "1": "flagAcquired"
@@ -534,7 +534,7 @@
   "docker_url": "vaday/tomcat",
   "docker_port": "8080",
   "title": " Arbitrary Write-file Vulnerability (CVE-2017-12615)",
-  "content": "When running Apache Tomcat 7.0.0 to 7.0.79 on Windows with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
+  "content": "When running Apache Tomcat 7.0.0 to 7.0.79 on Windows with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server. The target port on which the target host machine is running is 8080",
   "image_tag_id": "latest",
   "flag": {
     "1": "iamtheflag"
@@ -653,7 +653,7 @@ Select the sqlite database while installing and note down the user name and pass
  "difficulty": "medium"
 },
 {
-"docker_url": "vaday/xss14",
+"docker_url": "vaday/xssdomain",
 "docker_port": "80",
 "title": "XSS DomainMod",
 "args": [
@@ -703,7 +703,7 @@ Select the sqlite database while installing and note down the user name and pass
   "-c"
 ],
 "content": "The following URI is vulnerable http://<ip>/index.php?option=com_jssupportticket&c=ticket&task=downloadbyname&id=0&name=. Login to the web app using the following credentials id = username password= password. The objective is to find and exploit the vulnerability. ",
-"image_tag_id": "47216",
+"image_tag_id": "latest",
 "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
 "category": "m8",
  "difficulty": "medium"
@@ -745,6 +745,51 @@ Select the sqlite database while installing and note down the user name and pass
   "1":"Retrieve the flag value stored in /etc/flagA"},
 "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
 "category": "m8",
+ "difficulty": "Easy"
+},
+{
+"docker_url": "vaday/datastructure",
+"docker_port": "8888",
+"title": "Data Structure",
+"content": "This is a Jupyter Notebook with some basic exercises and explaination on Lists, Dictionaries and tuples. If you dont know anything about Jupyter notebook, it is recommended to get some pre-requisite on that.",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":""},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "py101",
+ "difficulty": "Easy"
+},
+{
+"docker_url": "vaday/pycontrol",
+"docker_port": "8888",
+"title": "Control Flow",
+"content": "This is a Jupyter Notebook with some basic exercises and explaination on Looping - Iterables, Collections, Sequences. If you dont know anything about Jupyter notebook, it is recommended to get some pre-requisite on that.",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":""},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "py101",
+ "difficulty": "Easy"
+},
+{
+"docker_url": "vaday/pyfunction",
+"docker_port": "8888",
+"title": "Functions",
+"content": "This is a Jupyter Notebook with some basic exercises and explaination on functions in python. If you dont know anything about Jupyter notebook, it is recommended to get some pre-requisite on that.",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":""},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "py101",
  "difficulty": "Easy"
 }
 ]
