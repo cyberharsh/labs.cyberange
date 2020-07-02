@@ -585,8 +585,7 @@
  "docker_port": "8081",
  "docker_target_port": "80",
  "title": "Drupal core CVE-2018-7602",
- "content": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result in the site being compromised. This vulnerability is related to Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002. Both SA-CORE-2018-002 and this vulnerability are being exploited in the wild. Complete the drupal installation by completing the following form.
-Select the sqlite database while installing and note down the user name and password while setting up the profile.",
+ "content": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result in the site being compromised. This vulnerability is related to Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002. Both SA-CORE-2018-002 and this vulnerability are being exploited in the wild. The Login credentials are username- admin password- admin123",
  "image_tag_id": "latest",
  "flag": {
    "1": "drupalflag"
