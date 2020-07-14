@@ -258,7 +258,7 @@
    "content": "This module exploits a lack of authentication and a directory traversal in HP Intelligent Management, specifically in the DownloadServlet from the BIMS component, in order to retrieve arbitrary files with SYSTEM privileges. This module has been tested successfully on HP Intelligent Management Center 5.1 E0202 with BIMS 5.1 E0201 over Windows 2003 SP2.",
    "image_tag_id": "2.0",
    "flag": {
-     "1": "my secreteroot"
+     "1": "my secret"
    },
    "flag_question": {
      "1": "What is the Flag Value retrieved from the downloaded File?"
@@ -275,7 +275,7 @@
    "content": "This module exploits a lack of authentication and access control in HP Intelligent Management, specifically in the FileDownloadServlet from the SOM component, in order to retrieve arbitrary files with SYSTEM privileges. This module has been tested successfully on HP Intelligent Management Center 5.2_E0401 with SOM 5.2 E0401 over Windows 2003 SP2.",
    "image_tag_id": "2.0",
    "flag": {
-     "1": "My secret, hahaharoot"
+     "1": "My secret, hahaha"
    },
    "flag_question": {
      "1": "What is the Flag Value retrieved from the downloaded File?"
@@ -747,7 +747,7 @@
  "difficulty": "Easy"
 },
 {
-"docker_url": "vaday/datastructure",
+"docker_url": "vaday/datastructurepy",
 "docker_port": "8888",
 "title": "Data Structure",
 "content": "This is a Jupyter Notebook with some basic exercises and explaination on Lists, Dictionaries and tuples. If you dont know anything about Jupyter notebook, it is recommended to get some pre-requisite on that.",
@@ -790,5 +790,158 @@
 "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
 "category": "py101",
  "difficulty": "Easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8080",
+  "title": "Metasploit Practice - HP SiteScope SOAP Call getSiteScopeConfiguration Configuration Access",
+  "content": "This module exploits an authentication bypass vulnerability in HP SiteScope which allows to retrieve the HP SiteScope configuration, including administrative credentials. It is accomplished by calling the getSiteScopeConfiguration operation available through the APISiteScopeImpl AXIS service. The HP SiteScope Configuration is retrieved as file containing Java serialization data. This module has been tested successfully on HP SiteScope 11.20 over Windows 2003 SP2 and Linux Centos 6.3.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Access backdoor"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/hp_sitescope_getsitescopeconfiguration; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8080",
+  "title": "Metasploit Practice - HP SiteScope SOAP Call loadFileContent Remote File Access",
+  "content": "This module exploits an authentication bypass vulnerability in HP SiteScope to retrieve an arbitrary text file from the remote server. It is accomplished by calling the loadFileContent operation available through the APIMonitorImpl AXIS service. This module has been successfully tested on HP SiteScope 11.20 over Windows 2003 SP2 and Linux Centos 6.3.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Retrieve Secret File"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/hp_sitescope_loadfilecontent_fileaccess; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8080",
+  "title": "Metasploit Practice - Jenkins-CI Login Utility",
+  "content": "This module attempts to login to a Jenkins-CI instance using a specific user/pass.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Brute force the auth"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/jenkins_login; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8086",
+  "title": "Metasploit Practice - InfluxDB Enum Utility",
+  "content": "This module enumerates databases on InfluxDB using the REST API using the default authentication of root:root.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Enumerate databases"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/influxdb_enum; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8161",
+  "title": "Metasploit Practice - Apache ActiveMQ Directory Traversal",
+  "content": "This module exploits a directory traversal vulnerability in Apache ActiveMQ 5.3.1 and 5.3.2 on Windows systems. The vulnerability exists in the Jetty's ResourceHandler installed with the affected versions. This module has been tested successfully on ActiveMQ 5.3.1 and 5.3.2 over Windows 2003 SP2.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Retrieve secret.txt file"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/apache_activemq_traversal; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8161",
+  "title": "Metasploit Practice - Apache ActiveMQ JSP Files Source Disclosure",
+  "content": "This module exploits a source code disclosure in Apache ActiveMQ. The vulnerability is due to the Jetty's ResourceHandler handling of specially crafted URI's starting with //. It has been tested successfully on Apache ActiveMQ 5.3.1 over Windows 2003 SP2 and Ubuntu 10.04.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Retrieve secret.txt file"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/apache_activemq_source_disclosure; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "443",
+  "title": "Metasploit Practice - Riverbed SteelCentral NetProfiler NetExpress Remote Code Execution",
+  "content": "This module exploits three separate vulnerabilities found in the Riverbed SteelCentral NetProfiler/NetExpress virtual appliances to obtain remote command execution as the root user. A SQL injection in the login form can be exploited to add a malicious user into the application's database. An attacker can then exploit a command injection vulnerability in the web interface to obtain arbitrary code execution. Finally, an insecure configuration of the sudoers file can be abused to escalate privileges to root.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Obtain nonce value"
+  },
+  "module": "perl vulEmu.pl set activate:exploit/linux/http/riverbed_netprofiler_netexpress_exec; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8080",
+  "title": "Metasploit Practice - HP Intelligent Management SOM Account Creation",
+  "content": "This module exploits a lack of authentication and access control in HP Intelligent Management, specifically in the AccountService RpcServiceServlet from the SOM component, in order to create a SOM account with Account Management permissions. This module has been tested successfully on HP Intelligent Management Center 5.2 E0401 and 5.1 E202 with SOM 5.2 E0401 and SOM 5.1 E0201 over Windows 2003 SP2.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Create arbitrary account"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/admin/hp/hp_imc_som_create_account; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "8080",
+  "title": "Metasploit Practice - HTTP Directory Brute Force Scanner",
+  "content": "This module identifies the existence of interesting directories by brute forcing the name in a given directory path.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Brute force directory names"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/brute_dirs; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
 }
 ]
