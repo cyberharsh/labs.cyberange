@@ -943,5 +943,135 @@
   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
   "category": "vapt",
   "difficulty": "easy"
-}
+},
+{
+"docker_url": "vaday/couchdb",
+"docker_port": "5984",
+"docker_target_port": "5984",
+"title": "Apache CouchDB CVE-2017-12635",
+"content": "Apache CouchDB is an open source database that focuses on ease of use and becoming a database that fully embraces the web. It is a NoSQL database that uses JSON as the storage format, JavaScript as the query language, and MapReduce and HTTP as the API. It has a wide range of applications. For example, the BBC is used in its dynamic content display platform, Credit Suisse is used in the marketing framework of its internal commodity department, and Meebo is used in its social platform (web and applications). On November 15, 2017, CVE-2017-12635 disclosed that CVE-2017-12635 is caused by differences in the execution of statements due to the difference in the way Erlang and JavaScript parse JSON. This vulnerability allows any user to create an administrator, which is a vertical permission bypass vulnerability.",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":""},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "m9",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vulhub/nginx",
+"docker_port": "8083",
+"docker_target_port": "80",
+"title": "Remote ",
+"content": "nginx 0.8.41 through 1.4.3 and 1.5.x before 1.5.7 allows remote attackers to bypass intended restrictions via an unescaped space character in a URI. The main reason is that the requested URI is parsed incorrectly, and the file name requested by the user is incorrectly obtained, which leads to the collateral impact of permission bypass and code execution.",
+"image_tag_id": "1.4.2",
+"flag": {
+  "1": "securitybypass"
+},
+"flag_question":{
+  "1":"What is the value stored in /etc/flagA ?"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Hard"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "80",
+  "title": "Metasploit Practice - Drupal Views Module Users Enumeration",
+  "content": "This module exploits an information disclosure vulnerability in the Views module of Drupal, brute-forcing the first 10 usernames from a to z",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Enumerate Users"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/drupal_views_user_enum; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+  "docker_url": "packed4rmadillo/msf-emu",
+  "docker_port": "80",
+  "title": "Metasploit Practice - GitLab User Enumeration",
+  "content": "The GitLab internal API is exposed unauthenticated on GitLab. This allows the username for each SSH Key ID number to be retrieved. Users who do not have an SSH Key cannot be enumerated in this fashion. LDAP users, e.g. Active Directory users will also be returned. This issue was fixed in GitLab v7.5.0 and is present from GitLab v5.0.0.",
+  "image_tag_id": "2.0",
+  "flag": {
+    "1": ""
+  },
+  "flag_question": {
+    "1": "Enumerate Users"
+  },
+  "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/gitlab_user_enum; tail -f /dev/null",
+  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
+  "category": "vapt",
+  "difficulty": "easy"
+},
+{
+"docker_url": "vaday/php20121823",
+"docker_port": "8080",
+"docker_target_port": "80",
+"title": "Php CVE-2012-1823",
+"content": "Back to this loophole. CVE-2012-1823 is the vulnerability of php-cgi sapi. I introduced the two operating modes provided by php-cgi: cgi and fastcgi. This vulnerability only occurs in php running in cgi mode. Simply put, this vulnerability is that the querystring requested by the user is used as a parameter of php-cgi, which ultimately leads to a series of results.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "vulnerable_php_flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/phpmailer",
+"docker_port": "8080",
+"docker_target_port": "80",
+"title": "Phpmailer CVE-2017-5223",
+"content": "In the process of sending emails, PHPMailer will look for the image tag ( <img src='...'>) in the email content and extract the value of its src attribute as an attachment. Therefore, if we can control part of the email content, we can use <img src='/etc/passwd'>the file /etc/passwd as an attachment to read out, causing arbitrary file reading vulnerabilities.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "secret_revealed"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/appweb",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "Appweb CVE-2018-8715 ",
+"content": "AppWeb is an embedded Web Server based on GPL open source agreement developed and maintained by Embedthis Software LLC. He is written in C/C++ and can run on almost all popular operating systems. An authentication bypass vulnerability existed in its version before 7.0.3, for the two authentication methods of digest and form",
+"image_tag_id": "latest",
+"flag": {
+  "1": ""
+},
+"flag_question":{
+  "1":""},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Easy"
+},
+{
+"docker_url": "vaday/ffmpeg",
+"docker_port": "8079",
+"docker_target_port": "8080",
+"title": "Ffmpeg CVE-2016-1897/CVE-2016-1898",
+"content": "In FFMpeg2.X, due to improper processing of parsing HTTP Live Streaming m3u8 files, SSRF vulnerabilities and arbitrary file reading vulnerabilities can be caused. The vulnerability is triggered when the website allows users to upload multimedia files and use FFMpeg for processing.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "flagishere"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Medium"
+},
 ]
