@@ -964,7 +964,7 @@
 "docker_url": "vulhub/nginx",
 "docker_port": "8083",
 "docker_target_port": "80",
-"title": "Remote ",
+"title": "Remote Security Bypass ",
 "content": "nginx 0.8.41 through 1.4.3 and 1.5.x before 1.5.7 allows remote attackers to bypass intended restrictions via an unescaped space character in a URI. The main reason is that the requested URI is parsed incorrectly, and the file name requested by the user is incorrectly obtained, which leads to the collateral impact of permission bypass and code execution.",
 "image_tag_id": "1.4.2",
 "flag": {
