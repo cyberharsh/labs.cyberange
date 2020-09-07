@@ -962,7 +962,7 @@
 },
 {
 "docker_url": "vulhub/nginx",
-"docker_port": "8083",
+"docker_port": "8070",
 "docker_target_port": "80",
 "title": "Remote Security Bypass ",
 "content": "nginx 0.8.41 through 1.4.3 and 1.5.x before 1.5.7 allows remote attackers to bypass intended restrictions via an unescaped space character in a URI. The main reason is that the requested URI is parsed incorrectly, and the file name requested by the user is incorrectly obtained, which leads to the collateral impact of permission bypass and code execution.",
@@ -983,10 +983,10 @@
   "content": "This module exploits an information disclosure vulnerability in the Views module of Drupal, brute-forcing the first 10 usernames from a to z",
   "image_tag_id": "2.0",
   "flag": {
-    "1": ""
+    "1": "bob,barry,john,joe"
   },
   "flag_question": {
-    "1": "Enumerate Users"
+    "1": "Enumerate Users and submit with comma separataion"
   },
   "module": "perl vulEmu.pl set activate:auxiliary/scanner/http/drupal_views_user_enum; tail -f /dev/null",
   "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n",
@@ -1000,7 +1000,7 @@
   "content": "The GitLab internal API is exposed unauthenticated on GitLab. This allows the username for each SSH Key ID number to be retrieved. Users who do not have an SSH Key cannot be enumerated in this fashion. LDAP users, e.g. Active Directory users will also be returned. This issue was fixed in GitLab v7.5.0 and is present from GitLab v5.0.0.",
   "image_tag_id": "2.0",
   "flag": {
-    "1": ""
+    "1": "john"
   },
   "flag_question": {
     "1": "Enumerate Users"
@@ -1074,4 +1074,197 @@
 "category": "webexp",
  "difficulty": "Medium"
 },
+{
+"docker_url": "vaday/jmeter",
+"docker_port": "1099",
+"docker_target_port": "1099",
+"title": "Jmeter RMI deserialization (CVE-2018-1297)",
+"content": "Apache JMeter is a set of open source software written in the Java language for stress testing and performance testing from the Apache Software Foundation. There are deserialization vulnerabilities in its 2.x and 3.x versions, which can be exploited by attackers to execute arbitrary commands on the target server.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "1297flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2018",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/spring8046",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "Spring Data RCE (CVE-2017-8046)",
+"content": "Spring Data REST is built on Spring Data to help developers develop REST-style Web services more easily. In the Patch method of the REST API (implementing RFC6902 ), the value of path is passed in setValue, which causes the execution of the SpEL expression and triggers the remote command execution vulnerability.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "8046flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2017",
+ "difficulty": "Hard"
+},
+{
+"docker_url": "vaday/uwsgi",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "uWSGI PHP Directory Traversal Vulnerability (CVE-2018-7490)",
+"content": "uWSGI is a web application server, which implements protocols such as WSGI/uwsgi/http, and supports for various languages through plugins. The PHP plugin of uWSGI before 2.0.17 doesn't handle the detection of DOCUMENT_ROOT correctly, resulting in reading or running files outside the DOCUMENT_ROOT through the use of ..%2f.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "7490flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2018",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/jenkins1000861",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "RCE in Jenkins(CVE-2018-1000861)",
+"content": "Jenkins is developed using the Stapler framework, which allows users to call a public method through the URL PATH. Since this process is not restricted, the attacker can construct some special PATH to execute some sensitive Java methods. Through this loophole, we can find many exploitable chains. One of the most serious is to bypass the Groovy sandbox and cause unauthorized users to execute arbitrary commands: Jenkins will first check the script for errors before executing Groovy in the sandbox. The check operation is not sandboxed. Attackers can use Meta-Programming. Way to execute arbitrary commands while checking this step.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "1000861flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2018",
+ "difficulty": "Hard"
+},
+{
+"docker_url": "vaday/supervisord11610",
+"docker_port": "9001",
+"docker_target_port": "9001",
+"title": "RCE in Supervisord (CVE-2017-11610)",
+"content": "Supervisord provides a web server, running on port 9001, that allows users to manage their processes using a web interface. When this server is enabled, an XMLRPC server is also enabled at :9001/RPC2. Any user with access to the web interface can also send commands to the XMLRPC endpoint. Authentication may be required for access, and is determined in the config file. It is possible to abuse the XMLRPC server to issue malicious commands ",
+"image_tag_id": "latest",
+"flag": {
+  "1": "11610flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2017",
+ "difficulty": "Hard"
+},
+{
+"docker_url": "vaday/jboss7504",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "Red hat jboss application server CVE-2017-7504",
+"content": "Red Hat JBoss Application Server is an open source application server based on JavaEE. In JBoss AS 4.x and earlier versions, the HTTPServerILServlet.java file of JMS over HTTP Invocation Layer in the JbossMQ implementation process has a deserialization vulnerability. Remote attackers can use specially-made serialized data to use this vulnerability to execute arbitrary code.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "7504flag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2017",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/rails5418",
+"docker_port": "3000",
+"docker_target_port": "3000",
+"title": "Ruby rails CVE-2019-5418",
+"content": "In the controller render file, the view outside the application is rendered through the form, and the specific location of the file is determined according to the Accept header passed in by the user. Construct path traversal loopholes by passing in headers and read arbitrary files.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "railsflag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+ "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/s2053",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "S2-053 RCE (CVE-2017-12611)",
+"content": "Struts2 allows parsing OGNL expressions when using the Freemarker template engine. The data is not parsed by OGNL itself, but after being parsed once by Freemarker. It becomes an expression and is parsed by OGNL second time, leading to a remote code execution vulnerablity.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "yougottheflag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2017",
+ "difficulty": "Hard"
+},
+{
+"docker_url": "vaday/coldfusion2861",
+"docker_port": "8500",
+"docker_target_port": "8500",
+"title": "Adobe ColdFusion Directory Traversal Vulnerability",
+"content": "There is a directory traversal vulnerability in the Adobe ColdFusion 9.0.1 and earlier, which allow remote attackers to read arbitrary files via the locale parameter to (1) CFIDE/administrator/settings/mappings.cfm, (2) logging/settings.cfm, (3) datasources/index.cfm, (4) j2eepackaging/editarchive.cfm, and (5) enter.cfm in CFIDE/administrator/.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "hey_iamflag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Easy"
+},
+{
+"docker_url": "vaday/mongo10758",
+"docker_port": "8081",
+"docker_target_port": "8081",
+"title": "Mongo-express RCE vulnerability(CVE-2019-10758)",
+"content": "Affected versions of this package are vulnerable to Remote Code Execution (RCE) via endpoints that use the toBSON method. A misuse of the vm dependency to perform exec commands in a non-safe environment.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "mongoflag10758"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2019",
+"difficulty": "Medium"
+},
+{
+"docker_url": "vaday/weblogic2894",
+"docker_port": "7001",
+"docker_target_port": "7001",
+"title": "Oracle weblogic server component CVE-2018-2894",
+"content": "The vulnerability is an unauthenticated remote code execution (RCE) that allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server. Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. ",
+"image_tag_id": "latest",
+"flag": {
+  "1": "gotchaflag"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "2018",
+"difficulty": "Medium"
+},
+{
+"docker_url": "vaday/thinkphp5.0.23",
+"docker_port": "8080",
+"docker_target_port": "80",
+"title": "ThinkPHP5 5.0.23 RCE vulnerability",
+"content": "While obtaining the request method, the framework processes it incorrectly, which allows an attacker to call any method of the Request class, resulting in a RCE vulnerability through a specific exploit chain.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "congratulationsyougotit"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Medium"
+}
+
 ]
