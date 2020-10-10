@@ -1330,6 +1330,66 @@ Monstra 1.2.1 is vulnerable. login credentials username: admin and password: adm
 "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
 "category": "webexp",
 "difficulty": "medium"
+},
+{
+"docker_url": "vaday/mqttrecon",
+"docker_port": "1883",
+"title": "MQTT Reconnaissance",
+"args": [
+  "service mosquitto start; sleep 2; python3 test.py; tail -f /dev/null"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "In this lab you will be required to do a reconnaissance of the MQTT server running on the target hostmachine and answer the required questions to pass the challenge.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "1883", "2": "1.4.15", "3": "3"
+},
+"flag_question":{
+  "1":"On what port is MQTT running?", "2":"What is the version of MQTT server running?", "3":"Enumerate the MQTT server and find the number of topics(numeric)", },
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "simulation",
+ "difficulty": "easy"
+},
+{
+"docker_url": "vaday/mqttrecon1",
+"docker_port": "1883",
+"title": "MQTT Reconnaissance - 2",
+"args": [
+  "service mosquitto start; sleep 2; python3 test.py; tail -f /dev/null"
+],
+"command":[
+  "/bin/sh",
+  "-c"
+],
+"content": "In this lab we will dig a little deeper into reconnaissance of the MQTT server running on the target hostmachine. Answer the required questions to pass the challenge. To subscribe to the topic get the vivtim IP address from the nmap results of the target hostname.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "sensor", "2": "10", "3": "50ppm"
+},
+"flag_question":{
+  "1":"What is the topic under which sensors are publishing data?", "2":"What is the time gap between two subsequent publish message of sensors(in seconds)?", "3":"What is the value oof the AQI index?", },
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n Username:cyberange and Password:admin123",
+"category": "simulation",
+ "difficulty": "easy"
+},
+{
+"docker_url": "vaday/samba7494",
+"docker_port": "445",
+"docker_target_port": "445",
+"title": "Samba RCE CVE-2017-7494",
+"content": "Samba in 4.5.9 version and before that is vulnerable to a remote code execution vulnerability named SambaCry. CVE-2017-7494 allows remote authenticated users to upload a shared library to a writable shared folder, and perform code execution attacks to take control of servers that host vulnerable Samba services.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "samba7494"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "m8",
+"difficulty": "Medium"
 }
 
 ]
