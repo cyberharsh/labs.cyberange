@@ -585,7 +585,7 @@
  "docker_port": "8081",
  "docker_target_port": "80",
  "title": "Drupal core CVE-2018-7602",
- "content": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result in the site being compromised. This vulnerability is related to Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002. Both SA-CORE-2018-002 and this vulnerability are being exploited in the wild. The Login credentials are username- admin password- admin123",
+ "content": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result in the site being compromised. This vulnerability is related to Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002. Both SA-CORE-2018-002 and this vulnerability are being exploited in the wild. The vulnerable web app is running on port 8086 and the Login credentials are username- drupal password- drupal",
  "image_tag_id": "latest",
  "flag": {
    "1": "drupalflag"
@@ -1126,7 +1126,7 @@
 "docker_url": "vaday/jenkins1000861",
 "docker_port": "8080",
 "docker_target_port": "8080",
-"title": "RCE in Jenkins(CVE-2018-1000861)",
+"title": "RCE in JenkinsCVE-2018-1000861",
 "content": "Jenkins is developed using the Stapler framework, which allows users to call a public method through the URL PATH. Since this process is not restricted, the attacker can construct some special PATH to execute some sensitive Java methods. Through this loophole, we can find many exploitable chains. One of the most serious is to bypass the Groovy sandbox and cause unauthorized users to execute arbitrary commands: Jenkins will first check the script for errors before executing Groovy in the sandbox. The check operation is not sandboxed. Attackers can use Meta-Programming. Way to execute arbitrary commands while checking this step.",
 "image_tag_id": "latest",
 "flag": {
@@ -1190,7 +1190,7 @@
 "docker_url": "vaday/s2053",
 "docker_port": "8080",
 "docker_target_port": "8080",
-"title": "S2-053 RCE (CVE-2017-12611)",
+"title": "S2-053 RCE CVE-2017-12611",
 "content": "Struts2 allows parsing OGNL expressions when using the Freemarker template engine. The data is not parsed by OGNL itself, but after being parsed once by Freemarker. It becomes an expression and is parsed by OGNL second time, leading to a remote code execution vulnerablity.",
 "image_tag_id": "latest",
 "flag": {
@@ -1265,6 +1265,71 @@
 "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
 "category": "webexp",
 "difficulty": "Medium"
+},
+{
+"docker_url": "vaday/gpeasy",
+"docker_port": "80",
+"docker_target_port": "80",
+"title": "gpEasy CMS - Cross-Site Scripting",
+"content": "Cross-site scripting (XSS) vulnerability in the NewSectionPrompt function in include/tool/editing_page.php in gpEasy CMS 3.5.2 and earlier allows remote attackers to inject arbitrary web script or HTML via the section parameter in a new_section action to index.php. login credentials to web app are, username = admin and password = admin123",
+"image_tag_id": "38236",
+"flag": {
+"1": "section"
+},
+"flag_question":{
+"1":"Enter the parameter name that is vulnerable to XSS"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Easy"
+},
+{
+"docker_url": "vaday/wondercms",
+"docker_port": "80",
+"docker_target_port": "80",
+"title": "Wonder CMS 2.3.1 - Unrestricted File Upload ",
+"content": "In WonderCMS 2.3.1, the upload functionality accepts random application extensions and leads to malicious File Upload.",
+"image_tag_id": "43963",
+"flag": {
+"1": "nowyoucanseeme"
+},
+"flag_question":{
+"1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Easy"
+},
+{
+"docker_url": "vaday/gpeasy",
+"docker_port": "80",
+"docker_target_port": "80",
+"title": "gpEasy 2.3.3 - Cross-Site Scripting",
+"content": "Cross-site scripting (XSS) vulnerability in index.php/Admin_Preferences in gpEasy CMS 2.3.3 allows remote attackers to inject arbitrary web script or HTML via the jsoncallback parameter.",
+"image_tag_id": "37104",
+"flag": {
+"1": "jsoncallback"
+},
+"flag_question":{
+"1":"Enter the parameter name that is vulnerable to XSS"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Easy"
+},
+{
+"docker_url": "vaday/monstra",
+"docker_port": "80",
+"docker_target_port": "80",
+"title": "Monstra CMS 1.2.1 - Multiple HTML Injection Vulnerabilities ",
+"content": "Monstra is prone to multiple HTML-injection vulnerabilities because it fails to properly sanitize user-supplied input.Successful exploits will allow attacker-supplied HTML and script code to run in the context of the affected browser, potentially allowing the attacker to steal cookie-based authentication credentials or to control how the site is rendered to the user. Other attacks are also possible.
+Monstra 1.2.1 is vulnerable. login credentials username: admin and password: admin123",
+"image_tag_id": "37651",
+"flag": {
+"1": "action"
+},
+"flag_question":{
+"1":"Enter the parameter name that is vulnerable"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "medium"
 }
 
 ]
