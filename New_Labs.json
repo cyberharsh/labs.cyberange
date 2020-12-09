@@ -496,7 +496,7 @@
    "docker_url": "vaday/rubyrails",
    "docker_port": "3000",
    "title": "Ruby On Rails Path Traversal Vulnerability (CVE-2018-3760)",
-   "content": "There is a path traversal vulnerability caused by secondary decoding in Sprockets 3.7.1 and lower versions. An attacker can use %252e%252e/ to access the root directory and read or execute any file on the target server.",
+   "content": "There is a path traversal vulnerability caused by secondary decoding in Sprockets 3.7.1 and lower versions. An attacker can use %252e%252e/ to access the root directory and read or execute any file on the target server. Navigate to /assets/file: and then try to do backtracking to get flag value.",
    "image_tag_id": "latest",
    "flag": {
      "1": "flagachieved"
@@ -662,7 +662,7 @@
   "/bin/sh",
   "-c"
 ],
-"content": "The following URI is vulnerable to sql injection. index.php?option=com_jsjobs&task=cities.savecity&citydata= . Login to the web app using the following credentials id = username password= password ",
+"content": "The following URI is vulnerable to sql injection. index.php?option=com_jsjobs&task=cities.savecity&citydata= . Login to the web app using the following credentials id = admin password= admin123 ",
 "image_tag_id": "1913618",
 "flag": {
   "1": ""
@@ -1283,12 +1283,12 @@
 "difficulty": "Easy"
 },
 {
-"docker_url": "vaday/wondercms",
+"docker_url": "vaday/wondercms43963",
 "docker_port": "80",
 "docker_target_port": "80",
 "title": "Wonder CMS 2.3.1 - Unrestricted File Upload ",
 "content": "In WonderCMS 2.3.1, the upload functionality accepts random application extensions and leads to malicious File Upload.",
-"image_tag_id": "43963",
+"image_tag_id": "latest",
 "flag": {
 "1": "nowyoucanseeme"
 },
@@ -1555,7 +1555,7 @@ Monstra 1.2.1 is vulnerable. login credentials username: admin and password: adm
  "docker_target_port": "80",
  "title": "TCPDUMP Practice",
  "content": "In this lab go to the victim machine and use tcpdump to answer the given questions. The network interface to capture the packet is lo.",
- "image_tag_id": "new",
+ "image_tag_id": "99",
  "flag": {
    "1": "yes",
    "2": "yes",
@@ -1575,5 +1575,79 @@ Monstra 1.2.1 is vulnerable. login credentials username: admin and password: adm
  "instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
  "category": "m8",
  "difficulty": "Medium"
- }
+},
+{
+"docker_url": "vaday/netcat",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "Netcat and File Transfers",
+"content": "In this lab we will  use Netcat to do file transfers between the attacker and victim machine. We will also use Netcat to create a web chat server between the two machines.",
+"image_tag_id": "1",
+"flag": {
+  "1": "file_transfered",
+  "2": "compress&send",
+  "3": "81"
+},
+"flag_question":{
+  "1":"In victim machine there is a file called transfer, use netcat to transfer it to attackers machine. Submit the content of file as flag to mark complete.",
+  "2":"There is another file called compress. Compress and send the file using netcat. Submit the file content to mark as done.",
+  "3":"Scan for an open port using netcat in range 1-100 and use that port to create chat server between the two machines. Submit the open port found"
+},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "m8",
+"difficulty": "Medium"
+},
+{
+"docker_url": "vaday/firewallconf",
+"docker_port": "8080",
+"docker_target_port": "8080",
+"title": "ModSecurity Firewall Configuration",
+"content": "In this lab we have already installed Mod Security firewall for you. However it is not configured. A web app is also running on the same machine which is vulnerable to sql. You are required to configure the mod security firewall to mitigate the sql attack on the web app. Complete the challenge questions to configure and protect the web app from sql attacks. You will be required to start the apache service to see the effects in place. Also go through the solution document to see how to check if the effects have taken place. If you curl the vulnerable parameter of the web app before configuring the firewall you be able to get the exploited result, however after configuring the firewall you will see the access denied result.",
+"image_tag_id": "1",
+"flag": {
+  "1": "Done",
+  "2": "Done",
+  "3": "Done",
+  "4": "Done"
+},
+"flag_question":{
+  "1":"Open the Modsecurity configuration file in etc directory and change the secruleengine from DetectionOnly to On. Enter done when complete.",
+  "2":"Open the security2 configuration file in the mods enabled folder of apache directory. Read the file and uncomment the ones that are asked to. Submit done when complete.",
+  "3":"Open the default configuration file of the web app and read it, You will find a commented line that needs to be uncommented. Submit done when complete.",
+  "4":"Open the solution document and find the vulnerable code run it before and configuring the firewall. Submit done if you get the desired result."
+},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "m8",
+"difficulty": "Medium"
+},
+{
+"docker_url": "vaday/afupload",
+"docker_port": "80",
+"title": "Arbitrary File Upload Vulnerability ",
+"content": "In this lab you would be required to navigate in the html directory and then inside the cutenews directory. Once inside that you will land on a login page, credentials to login are user=admin and pass=password. After logging in you need to navigate to the personal options. Here you will look for to upload a php shell that will help you solve the challenge question. ",
+"image_tag_id": "latest",
+"flag": {
+  "1": "flag_aquired"
+},
+"flag_question":{
+  "1":"Find the value stored in /etc/flagA"},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "medium"
+},
+{
+"docker_url": "vaday/collgesql",
+"docker_port": "80",
+"title": "SQL Injection in Login Page",
+"content": "In this lab there exists an aql injection vulnerability in the login page. You are required to exploit and get a successful login.",
+"image_tag_id": "latest",
+"flag": {
+  "1": "Done"
+},
+"flag_question":{
+  "1":"Exploit SQL in the login page. Enter done when complete."},
+"instructions": "This lab is dedicated to you! No other users are on this network, \nOnce you start the lab, you will have access to a root terminal of a Kali instance\nThere is a custom application running on the target machine. The IP address will be shown to you when you click on Start\n ",
+"category": "webexp",
+"difficulty": "Easy"
+}
 ]
